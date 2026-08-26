@@ -34,7 +34,8 @@ try {
   for (const entry of entries) {
     if (entry.isFile() && extname(entry.name) === '.html') {
       const filePath = join(BLOG_DIR, entry.name);
-      const urlPath = `/blog/${entry.name}`;
+      const slug = entry.name.replace(/\.html$/, '');
+      const urlPath = `/blog/${slug}`;
       pages.push({
         loc: `${SITE_URL}${urlPath}`,
         priority: '0.8',

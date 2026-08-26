@@ -92,8 +92,8 @@ Set `SITE_URL` and `INDEXNOW_API_KEY` as Pages environment variables if you use 
 ## Adding a blog post
 
 1. Create a new static HTML file under `public/blog/kebab-case-title.html`.
-2. Include the same SEO meta tags, Open Graph, Twitter Cards, and Schema.org `BlogPosting` JSON-LD as the sample post.
-3. Add the post to `src/components/Blog/Blog.jsx`.
+2. In the HTML, set canonical, `og:url`, Twitter URL and Schema.org `url` to the clean URL without `.html` (for example `https://kotitoimitus.com/blog/kebab-case-title`). Cloudflare Pages serves the page at the clean URL via Pretty URLs.
+3. Add the post to `src/components/Blog/Blog.jsx` using the clean URL.
 4. Regenerate the sitemap with `npm run sitemap` (this also runs automatically before `npm run build`).
 
 ## Sitemap and IndexNow

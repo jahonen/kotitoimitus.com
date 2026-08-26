@@ -3,7 +3,7 @@ import './Blog.scss';
 const posts = [
   {
     title: 'Tervetuloa – tästä Kotitoimitus.com sai alkunsa',
-    href: '/blog/tervetuloa-tasta-kotitoimitus-sai-alkunsa.html',
+    href: '/blog/tervetuloa-tasta-kotitoimitus-sai-alkunsa',
     date: '26. elokuuta 2026',
     description:
       'Kotitoimitus.com auttaa tuottajia, maahantuojia ja muita toimijoita tuomaan laadukkaat juomansa suomalaisten saataville vastuullisesti ja lainmukaisesti.',
