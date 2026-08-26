@@ -6,7 +6,15 @@ This repository contains the static website for Kotitoimitus.com.
 
 ```
 .
-├── index.html              # Vite entry HTML
+├── index.html              # Vite entry HTML with SEO metadata and JSON-LD
+├── public/                 # Static assets copied to dist/ as-is
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── manifest.json
+│   ├── og-image.svg
+│   ├── llms.txt
+│   └── blog/               # Static blog posts with their own SEO
+│       └── alkoholin-kotiintoimitus-suomi-2027.html
 ├── src/
 │   ├── main.jsx            # React app mount
 │   ├── main.scss           # Shared SCSS variables and resets
@@ -72,3 +80,17 @@ This site is designed for Cloudflare Pages. In the Cloudflare dashboard:
 4. Build output directory: `dist`
 
 Then point your Cloudflare domain to the Pages project. See `integration.md` for details.
+
+## SEO, structured data and social sharing
+
+- `index.html` contains comprehensive SEO meta tags, Open Graph, Twitter Cards, and Schema.org JSON-LD.
+- `public/robots.txt` and `public/sitemap.xml` guide crawlers.
+- `public/llms.txt` gives AI crawlers a concise summary.
+- `public/og-image.svg` is the social sharing image. Convert it to PNG if a specific platform requires raster format.
+- The blog post in `public/blog/` is a standalone static HTML page with its own SEO metadata.
+
+## Adding a blog post
+
+1. Create a new static HTML file under `public/blog/kebab-case-title.html`.
+2. Include the same SEO meta tags, Open Graph, Twitter Cards, and Schema.org `BlogPosting` JSON-LD as the sample post.
+3. Add the post to `public/sitemap.xml` and to `src/components/Blog/Blog.jsx`.

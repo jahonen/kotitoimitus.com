@@ -1,0 +1,17 @@
+{
+  "name": "Kotitoimitus.com",
+  "short_name": "Kotitoimitus",
+  "description": "B2B-ratkaisut alkoholilain mukaiseen kotiintoimitukseen Suomessa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "fi",
+  "icons": [
+    {
+      "src": "/og-image.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

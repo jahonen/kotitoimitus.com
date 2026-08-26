@@ -1,0 +1,33 @@
+# llms.txt — Kotitoimitus.com
+
+Kotitoimitus.com provides B2B services for alcohol home delivery in Finland under the amended Alcohol Act (alkoholilaki).
+
+## What we do
+
+We help Finnish and international businesses comply with the 2026 amendment to the Alcohol Act (589/2026), which entered into force on 3 July 2026. Key operational dates:
+
+- 3 July 2026: amendment entered into force
+- Permit applications can be filed roughly from November 2026 onwards
+- Actual home deliveries may begin roughly from 3 January 2027
+
+Our B2B services include:
+
+- Applying for and managing the alcohol delivery permit (toimituslupa)
+- Arranging delivery passes (toimituspassi) for delivery personnel
+- Providing licensed alcohol delivery personnel (alkoholijuoman toimittaja)
+- Age verification at purchase and at handover, including the 20-year threshold for strong alcohol
+- Compliance with permitted delivery hours (9.00–21.00) and prohibited delivery locations
+- Support for cross-border distance sales within the EEA and tax handling
+
+## Important legal limits
+
+- The amended act is 589/2026; the original Alcohol Act is 1102/2017.
+- For non-Alko retailers, deliverable alcoholic beverages are generally capped at 8.0 % ABV for fermented products and 5.5 % ABV for other products; stronger products remain Alko-exclusive for delivery.
+- Recipients must be of legal age: 18 for mild alcohol, 20 for strong alcohol (väkevät alkoholijuomat).
+- Deliveries are allowed only between 9.00 and 21.00.
+
+## Contact
+
+Businesses interested in preparing for home delivery can subscribe to our newsletter or request a quote via the site.
+
+Last updated: 2026-08-26

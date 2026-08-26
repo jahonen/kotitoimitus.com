@@ -3,6 +3,7 @@ import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 import Audience from './components/Audience/Audience';
 import Compliance from './components/Compliance/Compliance';
+import Blog from './components/Blog/Blog';
 import Newsletter from './components/Newsletter/Newsletter';
 import Footer from './components/Footer/Footer';
 import './App.scss';
@@ -16,6 +17,7 @@ function App() {
         <Services />
         <Audience />
         <Compliance />
+        <Blog />
         <Newsletter />
       </main>
       <Footer />
