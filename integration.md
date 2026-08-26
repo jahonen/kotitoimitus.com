@@ -41,6 +41,14 @@
 - **Action required:** Add the property in each console and submit `https://kotitoimitus.com/sitemap.xml`.
 - **Notes:** For Google, use the Search Console sitemap submission. For Bing, use IndexNow or Webmaster Tools.
 
+## Ahrefs Analytics
+
+- **Purpose:** Track website traffic and SEO performance.
+- **Script:** `https://analytics.ahrefs.com/analytics.js`
+- **Key:** `5Ps8bjh1AoFpG7wY90xkRQ`
+- **Installed in:** `index.html` and all static blog post templates.
+- **Docs:** https://ahrefs.com/analytics
+
 ## Google Fonts
 
 - **Purpose:** Loads the Noto Sans font family.
