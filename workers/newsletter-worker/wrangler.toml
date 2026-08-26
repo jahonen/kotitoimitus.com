@@ -1,0 +1,9 @@
+name = "kotitoimitus-newsletter-worker"
+main = "src/index.js"
+compatibility_date = "2026-08-26"
+
+# Add these secrets via wrangler secret put:
+# RESEND_API_KEY
+# OWNER_EMAIL
+# [vars]
+# RESEND_FROM_EMAIL = "newsletter@kotitoimitus.com"
