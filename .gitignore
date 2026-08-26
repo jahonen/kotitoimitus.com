@@ -8,6 +8,9 @@ dist/
 build/
 *.local
 
+# Generated assets
+public/og-image.png
+
 # Cloudflare Worker
 workers/**/node_modules/
 workers/**/.wrangler/

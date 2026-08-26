@@ -57,6 +57,17 @@
 - **Usage:** Icons are linked in `index.html` and blog templates; the logo is used as a header image in `Header.jsx` and blog headers.
 - **Palette:** Logo colors (deep green and gold) drive the site color system in `src/main.scss`.
 
+## Build-time rendering tools
+
+- **Purpose:** Prerender the React app and generate a PNG fallback from the SVG social image.
+- **Packages:**
+  - `@resvg/resvg-js` — renders `public/og-image.svg` to a 1200×630 PNG at build time.
+  - Vite SSR module loader — used by `scripts/prerender.js` to render the React app to static HTML without a headless browser.
+- **Scripts:**
+  - `scripts/prerender.js` — renders the React app to a static HTML string and injects it into `dist/index.html`.
+  - `scripts/generate-og-image.js` — renders `public/og-image.svg` and saves a 1200×630 PNG to `public/og-image.png`.
+- **Notes:** Both tools run only during `npm run build`. No browser binary is required, which keeps the Cloudflare Pages build reliable.
+
 ## Google Fonts
 
 - **Purpose:** Loads the Noto Sans font family.

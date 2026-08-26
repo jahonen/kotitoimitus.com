@@ -10,11 +10,12 @@ This repository contains the static website for Kotitoimitus.com.
 ├── public/                 # Static assets copied to dist/ as-is
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   ├── manifest.json
-│   ├── og-image.svg
+│   ├── site.webmanifest    # PWA manifest
+│   ├── og-image.svg        # Social sharing image (source)
+│   ├── og-image.png        # Social sharing image (generated PNG fallback)
 │   ├── llms.txt
 │   └── blog/               # Static blog posts with their own SEO
-│       └── alkoholin-kotiintoimitus-suomi-2027.html
+│       └── tervetuloa-tasta-kotitoimitus-sai-alkunsa.html
 ├── src/
 │   ├── main.jsx            # React app mount
 │   ├── main.scss           # Shared SCSS variables and resets
@@ -27,6 +28,10 @@ This repository contains the static website for Kotitoimitus.com.
 ├── functions/
 │   └── api/
 │       └── newsletter.js   # Cloudflare Pages Function for newsletter signups
+├── scripts/                # Build-time scripts
+│   ├── generate-sitemap.js
+│   ├── generate-og-image.js
+│   └── prerender.js
 ├── asset/
 │   └── kotitoimitus.com-mockup.html  # Original draft
 ├── component.md            # Component documentation
@@ -58,6 +63,17 @@ npm run build
 
 The production build is output to `dist/`.
 
+## Build pipeline
+
+`npm run build` executes the following steps:
+
+1. `npm run sitemap` — regenerates `public/sitemap.xml` from blog posts.
+2. `node scripts/generate-og-image.js` — renders `public/og-image.svg` to a 1200×630 PNG.
+3. `vite build` — bundles React assets and copies `public/` into `dist/`.
+4. `node scripts/prerender.js` — uses Vite's SSR module loader to render the React app to static
+   HTML and injects it into `dist/index.html`. This ensures search engines, AI crawlers and social
+   preview tools can read the page body without executing JavaScript.
+
 ## Newsletter signup
 
 1. Create or use an existing SendGrid account and generate an API key.
@@ -86,7 +102,7 @@ Set `SITE_URL` and `INDEXNOW_API_KEY` as Pages environment variables if you use 
 - `index.html` contains comprehensive SEO meta tags, Open Graph, Twitter Cards, and Schema.org JSON-LD.
 - `public/robots.txt` and `public/sitemap.xml` guide crawlers.
 - `public/llms.txt` gives AI crawlers a concise summary.
-- `public/og-image.svg` is the social sharing image. Convert it to PNG if a specific platform requires raster format.
+- `public/og-image.png` is a 1200×630 PNG social sharing image (generated from `og-image.svg`).
 - The blog post in `public/blog/` is a standalone static HTML page with its own SEO metadata.
 
 ## Adding a blog post
