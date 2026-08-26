@@ -76,10 +76,10 @@ This site is designed for Cloudflare Pages. In the Cloudflare dashboard:
 
 1. Create a new Pages project.
 2. Connect this GitHub repository.
-3. Build command: `npm run build`
+3. Build command: `npm run build` (or `npm run build && npm run indexnow` to auto-submit URLs on every build)
 4. Build output directory: `dist`
 
-Then point your Cloudflare domain to the Pages project. See `integration.md` for details.
+Set `SITE_URL` and `INDEXNOW_API_KEY` as Pages environment variables if you use the auto-submit option. Then point your Cloudflare domain to the Pages project. See `integration.md` for details.
 
 ## SEO, structured data and social sharing
 

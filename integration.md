@@ -12,10 +12,11 @@
 
 - **Purpose:** Static site hosting, serverless functions, and CDN for Kotitoimitus.com.
 - **Function path:** `functions/api/newsletter.js`
-- **Build command:** `npm run build`
+- **Build command:** `npm run build` (use `npm run build && npm run indexnow` to auto-submit URLs to IndexNow after each build)
 - **Build output directory:** `dist`
 - **Config file:** `wrangler.toml`
 - **Secrets:** `SENDGRID_API_KEY`, `OWNER_EMAIL` (set via the Cloudflare Pages dashboard or `wrangler pages secret put`)
+- **Environment variables for IndexNow:** `SITE_URL`, `INDEXNOW_API_KEY` (only needed if you run `npm run indexnow` in the build pipeline)
 - **Optional binding:** Cloudflare KV namespace `SUBSCRIBERS` for storing emails.
 - **Docs:** https://developers.cloudflare.com/pages/
 
