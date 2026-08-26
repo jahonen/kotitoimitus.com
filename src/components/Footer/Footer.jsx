@@ -10,7 +10,7 @@ function Footer() {
           <h3 className="footer__title">Kotitoimitus.com</h3>
           <p className="footer__tagline">
             B2B-ratkaisut alkoholin kotiintoimitukseen Suomessa. Hoidamme luvat, valvonnan ja
-            vaatimustenmukaisuuden puolestasi.
+            vaatimustenmukaisuuden puolestanne.
           </p>
         </div>
         <div>

@@ -70,8 +70,8 @@ function Newsletter() {
       <div className="newsletter__content">
         <h2 className="newsletter__title">Tilaa uutiskirje</h2>
         <p className="newsletter__description">
-          Kotitoimitus.com on perustamassa. Yrityksen rekisteröinti ja lupahakemukset käynnistyvät
-          marraskuussa 2026, ja siihen asti palvelu toimii tiedotuskanavana. Jättäkää
+          Kotitoimitus.com on perustamisvaiheessa. Yrityksen rekisteröinti ja lupahakemukset
+          käynnistyvät marraskuussa 2026, ja siihen asti palvelu toimii tiedotuskanavana. Jättäkää
           sähköpostiosoitteenne, niin ilmoitamme teille, kun rekisteröinti on valmis ja toiminta
           käynnistyy.
         </p>

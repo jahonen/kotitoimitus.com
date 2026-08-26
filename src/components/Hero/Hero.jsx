@@ -24,21 +24,21 @@ function Hero() {
       </div>
 
       <div className="hero__content">
-        <span className="hero__eyebrow">Yritys perustamassa</span>
+        <span className="hero__eyebrow">Yritys perustamisvaiheessa</span>
         <h1 className="hero__title">
           B2B-ratkaisut alkoholin lailliseen kotiintoimitukseen Suomessa
         </h1>
         <p className="hero__lead">
           Laki alkoholilain muuttamisesta (589/2026) tuli voimaan <strong>3.7.2026</strong>. Se mahdollistaa
           alkoholijuomien <strong>kotiintoimituksen</strong> ja <strong>etämyynnin</strong> Suomessa. Me autamme
-          yritystäsi valmistautumaan ja toimimaan lakien mukaisesti.
+          yrityksenne valmistautumaan ja toimimaan lakien mukaisesti.
         </p>
         <div className="hero__disclaimer">
           <strong>Huomio:</strong> Kotitoimitus.com on tällä hetkellä perustamisvaiheessa. Yrityksen
           viralliset rekisteröintitiedot ja tarkemmat yhteystiedot julkaistaan tällä sivustolla lähiaikoina.
-          Toimintamme käynnistyy marraskuussa 2026 yhdessä alkoholijuomien kotiintoimituslupien
-          rekisteröinnin kanssa. Tilaa uutiskirjeemme, niin kerromme, kun rekisteröinti on valmis ja palvelu
-          avautuu.
+          Toimintamme käynnistyy marraskuussa 2026 yhdessä yrityksen rekisteröinnin ja alkoholijuomien
+          kotiintoimituslupien hakemisen kanssa. Tilaa uutiskirjeemme, niin kerromme, kun rekisteröinti on
+          valmis ja palvelu avautuu.
         </div>
         <div className="hero__actions">
           <a className="hero__cta" href="#uutiskirje">

@@ -2,7 +2,7 @@ import './Compliance.scss';
 
 const requirements = [
   'Toimitukset suoritetaan ainoastaan toimitusluvan haltijan toimesta.',
-  'Luovutus tapahtuu päihtymättömälle vastaanottajalle, joka on täysi-ikäinen (18 v.) tai väkeviä alkoholijuomia koskien vähintään 20-vuotias.',
+  'Luovutus tapahtuu päihtymättömälle vastaanottajalle, joka on täysi-ikäinen (18 v.) tai, kun kyse on väkevistä alkoholijuomista, vähintään 20-vuotias.',
   'Toimituspassi pidetään aina mukana toimituksia suoritettaessa.',
   'Alkoholijuomien merkintä ja alkoholipitoisuusilmoitus ovat kunnossa.',
   'Toimitetaan vain sallittuihin osoitteisiin ja noudatetaan toimituspaikkoja koskevia rajoituksia.',

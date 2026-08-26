@@ -79,7 +79,7 @@ function Services() {
       <div className="services__header">
         <h2 className="services__title">Palvelumme kattavat kaiken tarvittavan</h2>
         <p className="services__lead">
-          Hoidamme toiminnan teknisen ja hallinnollisen puolen puolestasi, jotta voitte keskittyä
+          Hoidamme toiminnan teknisen ja hallinnollisen puolen puolestanne, jotta voitte keskittyä
           yrityksenne ydinosaamiseen.
         </p>
       </div>
