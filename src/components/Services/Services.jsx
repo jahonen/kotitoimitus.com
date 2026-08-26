@@ -22,13 +22,14 @@ const services = [
       'Toteutamme ikätarkastukset sekä ostovaiheessa että luovutuksen yhteydessä, kuten alkoholilaki ja Valvira vaativat.',
   },
   {
-    title: 'Toimitusaikojen noudattaminen',
+    title: 'Toimitusaikojen ja -paikkojen noudattaminen',
     description:
-      'Toimitukset ainoastaan sallituina aikoina (klo 9:00–21:00) ja kielletyille paikoille (esim. lastensuojelulaitokset, leikkikentät) ei toimiteta.',
+      'Toimitukset tehdään ainoastaan sallittuina aikoina (klo 9.00–21.00). Kiellettyihin toimituspaikkoihin emme toimita.',
   },
   {
     title: 'Rajat ylittävä etämyynti',
-    description: 'Tuki EEA-alueen (Euroopan talousalue) toimituksille ja verotuksen hoitamiseen.',
+    description:
+      'Tuemme ETA-alueen toimituksia ja avustamme verotuksen hoitamisessa.',
   },
 ];
 

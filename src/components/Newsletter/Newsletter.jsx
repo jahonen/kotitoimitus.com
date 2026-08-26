@@ -13,7 +13,7 @@ function Newsletter() {
 
     if (!email || !email.includes('@')) {
       setStatus('error');
-      setMessage('Syötä kelvollinen sähköpostiosoite.');
+      setMessage('Sähköpostiosoite ei ole kelvollinen.');
       return;
     }
 
@@ -31,15 +31,15 @@ function Newsletter() {
 
       if (response.ok) {
         setStatus('success');
-        setMessage(data.message || 'Kiitos! Olemme vastaanottaneet tilauksesi.');
+        setMessage(data.message || 'Kiitos! Olemme vastaanottaneet tilauksenne.');
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(data.message || 'Tilauksen lähetys epäonnistui. Yritä uudelleen.');
+        setMessage(data.message || 'Tilauksen lähetys epäonnistui. Yrittäkää uudelleen.');
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Yhteys palvelimeen epäonnistui. Yritä uudelleen.');
+      setMessage('Yhteys palvelimeen epäonnistui. Yrittäkää uudelleen.');
     }
   };
 
@@ -47,8 +47,8 @@ function Newsletter() {
     <section id="uutiskirje" className="newsletter">
       <h2 className="newsletter__title">Tilaa uutiskirje</h2>
       <p>
-        Haluatko pysyä ajan tasalla alkoholin kotiintoimituksen säädöksistä ja Kotitoimitus.com-palvelusta?
-        Jätä sähköpostiosoitteesi, niin ilmoitamme sinulle tärkeistä päivityksistä.
+        Haluatteko pysyä ajan tasalla alkoholin kotiintoimituksen säädöksistä ja Kotitoimitus.com-palvelusta?
+        Jättäkää sähköpostiosoitteenne, niin ilmoitamme teille tärkeistä päivityksistä.
       </p>
       <form className="newsletter__form" onSubmit={handleSubmit} noValidate>
         <input

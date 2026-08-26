@@ -111,7 +111,7 @@ export async function onRequestPost(context) {
 
     await sendNotificationEmail({ email, env, origin });
 
-    return new Response(JSON.stringify({ success: true, message: 'Kiitos! Olemme vastaanottaneet tilauksesi.' }), {
+    return new Response(JSON.stringify({ success: true, message: 'Kiitos! Olemme vastaanottaneet tilauksenne.' }), {
       status: 200,
       headers: getCorsHeaders(origin),
     });
