@@ -1,0 +1,12 @@
+name = "kotitoimitus-com"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-08-26"
+
+# Set these secrets in the Cloudflare Pages dashboard or via wrangler:
+#   wrangler pages secret put RESEND_API_KEY
+#   wrangler pages secret put OWNER_EMAIL
+#
+# Optional binding for storing subscribers in KV:
+# [[kv_namespaces]]
+# binding = "SUBSCRIBERS"
+# id = "your-kv-namespace-id"

@@ -6,29 +6,24 @@
 - **Endpoint:** `https://api.resend.com/emails`
 - **Auth:** Bearer token via `RESEND_API_KEY` secret.
 - **Docs:** https://resend.com/docs
-- **Notes:** A free Resend account is sufficient for low-volume notifications. You must verify a sending domain or use a shared domain before emails can be delivered reliably.
+- **Notes:** A free Resend account is sufficient for low-volume notifications. You must verify a sending domain or use a Resend-provided shared domain before emails can be delivered reliably.
 
-## Cloudflare Workers
+## Cloudflare Pages
 
-- **Purpose:** Serverless backend for the newsletter signup form.
-- **Resource:** `workers/newsletter-worker/`
-- **Secrets:** `RESEND_API_KEY`, `OWNER_EMAIL`
+- **Purpose:** Static site hosting, serverless functions, and CDN for Kotitoimitus.com.
+- **Function path:** `functions/api/newsletter.js`
+- **Build command:** `npm run build`
+- **Build output directory:** `dist`
+- **Config file:** `wrangler.toml`
+- **Secrets:** `RESEND_API_KEY`, `OWNER_EMAIL` (set via the Cloudflare Pages dashboard or `wrangler pages secret put`)
 - **Optional binding:** Cloudflare KV namespace `SUBSCRIBERS` for storing emails.
-- **Docs:** https://developers.cloudflare.com/workers/
+- **Docs:** https://developers.cloudflare.com/pages/
 
 ## Cloudflare domain / DNS
 
 - **Purpose:** Custom domain for the static site.
-- **Action required:** Point the domain's DNS A/AAAA or CNAME records to DanubeData once the site is created.
+- **Action required:** Add a CNAME record in Cloudflare DNS pointing to the Cloudflare Pages project domain.
 - **Docs:** https://developers.cloudflare.com/dns/
-
-## DanubeData Static Sites
-
-- **Purpose:** Static site hosting with custom domain, TLS, and global caching.
-- **Deployment methods:** Git repository (recommended), ZIP upload, or CLI push.
-- **Publish directory:** `dist`
-- **Config file:** `danube.json`
-- **Docs:** https://docs.danubedata.ro/static-sites
 
 ## Google Fonts
 

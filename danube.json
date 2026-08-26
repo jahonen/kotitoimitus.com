@@ -1,4 +1,0 @@
-{
-  "outputDir": "dist",
-  "ignore": ["*.map", "test/**", "*.test.js", "*.test.jsx"]
-}

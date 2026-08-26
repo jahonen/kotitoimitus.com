@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Newsletter.scss';
 
-const WORKER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_WORKER_URL || '';
+const WORKER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_WORKER_URL || '/api/newsletter';
 
 function Newsletter() {
   const [email, setEmail] = useState('');
@@ -14,12 +14,6 @@ function Newsletter() {
     if (!email || !email.includes('@')) {
       setStatus('error');
       setMessage('Syötä kelvollinen sähköpostiosoite.');
-      return;
-    }
-
-    if (!WORKER_ENDPOINT) {
-      setStatus('error');
-      setMessage('Tilauslomaketta ei ole vielä konfiguroitu. Yritä myöhemmin uudelleen.');
       return;
     }
 

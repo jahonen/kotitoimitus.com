@@ -16,14 +16,15 @@ This repository contains the static website for Kotitoimitus.com.
 │       └── ComponentName/
 │           ├── ComponentName.jsx
 │           └── ComponentName.scss
-├── workers/
-│   └── newsletter-worker/  # Cloudflare Worker for newsletter signups
+├── functions/
+│   └── api/
+│       └── newsletter.js   # Cloudflare Pages Function for newsletter signups
 ├── asset/
 │   └── kotitoimitus.com-mockup.html  # Original draft
 ├── component.md            # Component documentation
 ├── services.md             # Service documentation
 ├── integration.md          # External service documentation
-├── danube.json             # DanubeData static site config
+├── wrangler.toml           # Cloudflare Pages configuration
 └── package.json
 ```
 
@@ -40,7 +41,7 @@ This repository contains the static website for Kotitoimitus.com.
 # Install dependencies
 npm install
 
-# Run local dev server
+# Run local dev server (site only; functions run separately)
 npm run dev
 
 # Build static files for production
@@ -51,12 +52,23 @@ The production build is output to `dist/`.
 
 ## Newsletter signup
 
-1. Create a Resend account and generate an API key.
-2. Deploy the Cloudflare Worker in `workers/newsletter-worker/`.
-3. Set `RESEND_API_KEY` and `OWNER_EMAIL` secrets via `wrangler secret put`.
-4. Copy the worker URL into `.env` as `VITE_NEWSLETTER_WORKER_URL`.
-5. Rebuild and redeploy the site.
+1. Create a free Resend account and generate an API key.
+2. Create a Cloudflare Pages project from this GitHub repository.
+3. In the Pages dashboard, set these secrets:
+   - `RESEND_API_KEY`
+   - `OWNER_EMAIL` (your address)
+4. Optionally add a KV namespace binding named `SUBSCRIBERS` if you want to store emails.
+5. Cloudflare Pages builds and deploys the site automatically on every push to `main`.
+
+The signup form posts to `/api/newsletter`, which is served by `functions/api/newsletter.js`.
 
 ## Hosting
 
-This site is designed for DanubeData Static Sites. Connect this GitHub repository in the DanubeData dashboard and set the publish directory to `dist`. See `integration.md` for details.
+This site is designed for Cloudflare Pages. In the Cloudflare dashboard:
+
+1. Create a new Pages project.
+2. Connect this GitHub repository.
+3. Build command: `npm run build`
+4. Build output directory: `dist`
+
+Then point your Cloudflare domain to the Pages project. See `integration.md` for details.
