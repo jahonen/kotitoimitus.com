@@ -70,8 +70,10 @@ function Newsletter() {
       <div className="newsletter__content">
         <h2 className="newsletter__title">Tilaa uutiskirje</h2>
         <p className="newsletter__description">
-          Haluatteko pysyä ajan tasalla alkoholin kotiintoimituksen säädöksistä ja Kotitoimitus.com-palvelusta?
-          Jättäkää sähköpostiosoitteenne, niin ilmoitamme teille tärkeistä päivityksistä.
+          Kotitoimitus.com on perustamassa. Yrityksen rekisteröinti ja lupahakemukset käynnistyvät
+          marraskuussa 2026, ja siihen asti palvelu toimii tiedotuskanavana. Jättäkää
+          sähköpostiosoitteenne, niin ilmoitamme teille, kun rekisteröinti on valmis ja toiminta
+          käynnistyy.
         </p>
         <form className="newsletter__form" onSubmit={handleSubmit} noValidate>
           <input

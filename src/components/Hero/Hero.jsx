@@ -24,7 +24,7 @@ function Hero() {
       </div>
 
       <div className="hero__content">
-        <span className="hero__eyebrow">Toiminta alkaa 2027</span>
+        <span className="hero__eyebrow">Yritys perustamassa</span>
         <h1 className="hero__title">
           B2B-ratkaisut alkoholin lailliseen kotiintoimitukseen Suomessa
         </h1>
@@ -33,9 +33,16 @@ function Hero() {
           alkoholijuomien <strong>kotiintoimituksen</strong> ja <strong>etämyynnin</strong> Suomessa. Me autamme
           yritystäsi valmistautumaan ja toimimaan lakien mukaisesti.
         </p>
+        <div className="hero__disclaimer">
+          <strong>Huomio:</strong> Kotitoimitus.com on tällä hetkellä perustamisvaiheessa. Yrityksen
+          viralliset rekisteröintitiedot ja tarkemmat yhteystiedot julkaistaan tällä sivustolla lähiaikoina.
+          Toimintamme käynnistyy yhdessä alkoholijuomien kotiintoimituslupien rekisteröinnin kanssa
+          marraskuussa 2026. Tilaa uutiskirjeemme, niin kerromme, kun rekisteröinti on valmis ja palvelu
+          avautuu.
+        </div>
         <div className="hero__actions">
           <a className="hero__cta" href="#uutiskirje">
-            Pyydä tarjous
+            Tilaa päivitykset
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -52,14 +59,14 @@ function Hero() {
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
-            Lupia haettavissa noin marraskuusta 2026
+            Yrityksen rekisteröinti ja lupahakemukset marraskuussa 2026
           </span>
           <span className="hero__meta-item">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <circle cx="12" cy="12" r="10" />
               <polyline points="12 6 12 12 16 14" />
             </svg>
-            Toimitukset arviolta 3.1.2027
+            Kotiintoimitukset arviolta 3.1.2027
           </span>
         </div>
       </div>
