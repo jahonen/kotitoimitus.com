@@ -98,7 +98,7 @@ export async function onRequestPost(context) {
   const { email } = body;
 
   if (!isValidEmail(email)) {
-    return new Response(JSON.stringify({ error: 'Syötä kelvollinen sähköpostiosoite.' }), {
+    return new Response(JSON.stringify({ error: 'Syöttäkää kelvollinen sähköpostiosoite.' }), {
       status: 400,
       headers: getCorsHeaders(origin),
     });
@@ -118,7 +118,7 @@ export async function onRequestPost(context) {
   } catch (error) {
     console.error('Newsletter signup error:', error);
     return new Response(
-      JSON.stringify({ error: 'Tilauksen käsittely epäonnistui. Yritä myöhemmin uudelleen.' }),
+      JSON.stringify({ error: 'Tilauksen käsittely epäonnistui. Yrittäkää myöhemmin uudelleen.' }),
       { status: 500, headers: getCorsHeaders(origin) },
     );
   }

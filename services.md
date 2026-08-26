@@ -29,7 +29,7 @@ JSON response:
 ```json
 {
   "success": true,
-  "message": "Kiitos! Olemme vastaanottaneet tilauksesi."
+  "message": "Kiitos! Olemme vastaanottaneet tilauksenne."
 }
 ```
 

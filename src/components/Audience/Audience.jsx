@@ -1,12 +1,12 @@
 import './Audience.scss';
 
 const audiences = [
-  { label: 'Kotimaiset vähittäismyyjät', note: 'alkoholiluvan haltijat' },
-  { label: 'Alko Oy', note: 'ja sen kumppanit' },
-  { label: 'Ulkomaiset etämyyjät', note: 'ETA-alueelta' },
-  { label: 'Tuottajat ja maahantuojat', note: 'jotka haluavat myydä suoraan kuluttajille' },
-  { label: 'Kuljetus- ja logistiikkayritykset', note: 'jotka tarvitsevat toimitusluvan' },
-  { label: 'Ravintolat ja anniskeluyritykset', note: 'jotka laajentavat myyntiään kotiinkuljetukseen' },
+  { label: 'Kotimaiset vähittäismyyjät', note: ', alkoholiluvan haltijat' },
+  { label: 'Alko Oy', note: ' ja sen kumppanit' },
+  { label: 'Ulkomaiset etämyyjät', note: ', ETA-alueelta' },
+  { label: 'Tuottajat ja maahantuojat', note: ', jotka haluavat myydä suoraan kuluttajille' },
+  { label: 'Kuljetus- ja logistiikkayritykset', note: ', jotka tarvitsevat toimitusluvan' },
+  { label: 'Ravintolat ja anniskeluyritykset', note: ', jotka laajentavat myyntiään kotiinkuljetukseen' },
 ];
 
 function Audience() {
@@ -28,7 +28,7 @@ function Audience() {
               </svg>
             </span>
             <p className="audience__text">
-              <strong>{item.label}</strong>, {item.note}
+              <strong>{item.label}</strong>{item.note}
             </p>
           </li>
         ))}

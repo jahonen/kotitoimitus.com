@@ -29,7 +29,7 @@ const services = [
   {
     title: 'Alkoholijuoman toimittaja',
     description:
-      'Meidän alkoholijuoman toimittajamme (lisensoidut ja koulutetut) hoitavat toimituksen ja luovutuksen asiakkaalle tai vastaanottajalle.',
+      'Alkoholijuoman toimittajamme (lisensoidut ja koulutetut) hoitavat toimitukset ja luovutukset vastaanottajille.',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="1" y="3" width="15" height="13" />

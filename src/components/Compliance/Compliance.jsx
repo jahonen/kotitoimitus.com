@@ -15,8 +15,8 @@ function Compliance() {
       <div className="compliance__header">
         <h2 className="compliance__title">Laillisuus ja vaatimustenmukaisuus</h2>
         <p className="compliance__lead">
-          Noudatamme tiukasti alkoholilakia (1102/2017) ja sen muutosta (589/2026), joka tuli voimaan{' '}
-          <strong>3.7.2026</strong>. Palvelumme varmistavat, että:
+          Noudatamme tiukasti alkoholilakia (1102/2017) ja alkoholilain muutosta (589/2026), joka tuli
+          voimaan <strong>3.7.2026</strong>. Palvelumme varmistavat, että:
         </p>
       </div>
       <ul className="compliance__list">

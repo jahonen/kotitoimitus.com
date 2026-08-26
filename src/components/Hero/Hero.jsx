@@ -36,8 +36,8 @@ function Hero() {
         <div className="hero__disclaimer">
           <strong>Huomio:</strong> Kotitoimitus.com on tällä hetkellä perustamisvaiheessa. Yrityksen
           viralliset rekisteröintitiedot ja tarkemmat yhteystiedot julkaistaan tällä sivustolla lähiaikoina.
-          Toimintamme käynnistyy yhdessä alkoholijuomien kotiintoimituslupien rekisteröinnin kanssa
-          marraskuussa 2026. Tilaa uutiskirjeemme, niin kerromme, kun rekisteröinti on valmis ja palvelu
+          Toimintamme käynnistyy marraskuussa 2026 yhdessä alkoholijuomien kotiintoimituslupien
+          rekisteröinnin kanssa. Tilaa uutiskirjeemme, niin kerromme, kun rekisteröinti on valmis ja palvelu
           avautuu.
         </div>
         <div className="hero__actions">

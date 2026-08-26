@@ -45,7 +45,7 @@ function Footer() {
       <div className="footer__bottom">
         <p>
           © {currentYear} Kotitoimitus.com. Kaikki oikeudet pidätetään. Palvelumme noudattavat Suomen
-          alkoholilakia (1102/2017) ja sen muutosta (589/2026) sekä Valviran ohjeistuksia.
+          alkoholilakia (1102/2017) ja alkoholilain muutosta (589/2026) sekä Valviran ohjeistuksia.
         </p>
       </div>
     </footer>

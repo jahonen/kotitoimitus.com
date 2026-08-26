@@ -35,7 +35,7 @@ function Newsletter() {
 
     if (!email || !email.includes('@')) {
       setStatus('error');
-      setMessage('Sähköpostiosoite ei ole kelvollinen.');
+      setMessage('Syöttäkää kelvollinen sähköpostiosoite.');
       return;
     }
 
