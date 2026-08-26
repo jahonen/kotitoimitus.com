@@ -2,11 +2,11 @@ import './Blog.scss';
 
 const posts = [
   {
-    title: 'Alkoholin kotiintoimitus Suomessa 2026–2027: mitä yrityksen tietää?',
-    href: '/blog/alkoholin-kotiintoimitus-suomi-2027.html',
+    title: 'Tervetuloa – tästä Kotitoimitus.com sai alkunsa',
+    href: '/blog/tervetuloa-tasta-kotitoimitus-sai-alkunsa.html',
     date: '26. elokuuta 2026',
     description:
-      'Yhteenveto alkoholilain muutoksesta 589/2026: toimituslupa, toimituspassi, ikärajat, vahvuusrajat ja aikataulu yrityksille.',
+      'Kotitoimitus.com auttaa tuottajia, maahantuojia ja muita toimijoita tuomaan laadukkaat juomansa suomalaisten saataville vastuullisesti ja lainmukaisesti.',
   },
 ];
 
