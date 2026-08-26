@@ -1,20 +1,88 @@
 .services {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-16);
+}
+
+.services__header {
+  max-width: 640px;
+  margin-bottom: var(--space-10);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services__title {
-  color: #0f172a;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 0.5rem;
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
 }
 
-.services__list {
-  list-style-type: none;
-  padding: 0;
+@media (min-width: 768px) {
+  .services__title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.services__lead {
   margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
 }
 
-.services__item {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #e2e8f0;
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--space-4);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.service-card__title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.service-card__description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
 }

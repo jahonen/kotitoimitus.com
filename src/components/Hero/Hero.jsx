@@ -3,17 +3,66 @@ import './Hero.scss';
 function Hero() {
   return (
     <section id="hero" className="hero">
-      <h2 className="hero__title">Tervetuloa alkoholin kotiintoimituksen tulevaisuuteen</h2>
-      <p>
-        Laki alkoholilain muuttamisesta (589/2026) tuli voimaan <strong>3.7.2026</strong>. Se mahdollistaa
-        alkoholijuomien <strong>kotiintoimituksen</strong> ja <strong>etämyynnin</strong> Suomessa.{" "}
-        <strong>Kotitoimitus.com</strong> tarjoaa yrityksille kattavan B2B-palvelun, jolla voitte hyödyntää uusia
-        liiketoimintamahdollisuuksia laillisesti ja vaivattomasti.
-      </p>
-      <p className="hero__updated">
-        Voimaantuloa on porrastettu: toimituslupia voi hakea arviolta marraskuusta 2026 lähtien, ja toimitukset
-        voivat alkaa arviolta 3.1.2027.
-      </p>
+      <div className="hero__decoration" aria-hidden="true">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <circle cx="650" cy="400" r="280" fill="url(#heroGrad)" />
+          <circle cx="200" cy="150" r="120" fill="url(#heroGrad)" />
+          <path
+            d="M-50 550 Q200 450 400 520 T850 480"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="2"
+            strokeOpacity="0.15"
+          />
+        </svg>
+      </div>
+
+      <div className="hero__content">
+        <span className="hero__eyebrow">Toiminta alkaa 2027</span>
+        <h1 className="hero__title">
+          B2B-ratkaisut alkoholin lailliseen kotiintoimitukseen Suomessa
+        </h1>
+        <p className="hero__lead">
+          Laki alkoholilain muuttamisesta (589/2026) tuli voimaan <strong>3.7.2026</strong>. Se mahdollistaa
+          alkoholijuomien <strong>kotiintoimituksen</strong> ja <strong>etämyynnin</strong> Suomessa. Me autamme
+          yritystäsi valmistautumaan ja toimimaan lakien mukaisesti.
+        </p>
+        <div className="hero__actions">
+          <a className="hero__cta" href="#uutiskirje">
+            Pyydä tarjous
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a className="hero__cta hero__cta--secondary" href="#palvelut">
+            Tutustu palveluihin
+          </a>
+        </div>
+        <div className="hero__meta">
+          <span className="hero__meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            Lupia haettavissa noin marraskuusta 2026
+          </span>
+          <span className="hero__meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Toimitukset arviolta 3.1.2027
+          </span>
+        </div>
+      </div>
     </section>
   );
 }
