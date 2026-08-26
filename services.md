@@ -44,18 +44,18 @@ On error:
 ### Side effects
 
 1. Stores the subscriber email in a Cloudflare KV namespace if `SUBSCRIBERS` is bound.
-2. Sends a notification email to `OWNER_EMAIL` via the Resend API.
+2. Sends a notification email to `OWNER_EMAIL` via the SendGrid API.
 
 ### Required secrets
 
 Set these in the Cloudflare Pages dashboard or with `wrangler pages secret put`:
 
-- `RESEND_API_KEY` – API key from Resend.
+- `SENDGRID_API_KEY` – API key from SendGrid.
 - `OWNER_EMAIL` – The address that receives the signup notification.
 
 ### Optional environment variables
 
-- `RESEND_FROM_EMAIL` – Sender address (default: `newsletter@kotitoimitus.com`).
+- `SENDGRID_FROM_EMAIL` – Sender address (default: `newsletter@kotitoimitus.com`).
 
 ### Local development
 

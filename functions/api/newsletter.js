@@ -2,17 +2,17 @@
  * Cloudflare Pages Function: Newsletter signup handler.
  *
  * Receives a JSON POST with an email address, validates it, stores it in KV,
- * and sends a notification email to the site owner via Resend.
+ * and sends a notification email to the site owner via SendGrid.
  *
  * Required secrets (set in the Cloudflare Pages dashboard or via wrangler):
- *   - RESEND_API_KEY
+ *   - SENDGRID_API_KEY
  *   - OWNER_EMAIL
  *
  * Optional environment variables:
- *   - RESEND_FROM_EMAIL (defaults to newsletter@kotitoimitus.com)
+ *   - SENDGRID_FROM_EMAIL (defaults to newsletter@kotitoimitus.com)
  */
 
-const RESEND_API_URL = 'https://api.resend.com/emails';
+const SENDGRID_API_URL = 'https://api.sendgrid.com/v3/mail/send';
 
 function getCorsHeaders(origin) {
   return {
@@ -37,35 +37,43 @@ function escapeHtml(text) {
 }
 
 async function sendNotificationEmail({ email, env, origin }) {
-  const resendApiKey = env.RESEND_API_KEY;
+  const sendgridApiKey = env.SENDGRID_API_KEY;
   const ownerEmail = env.OWNER_EMAIL;
-  const fromEmail = env.RESEND_FROM_EMAIL || 'newsletter@kotitoimitus.com';
+  const fromEmail = env.SENDGRID_FROM_EMAIL || 'newsletter@kotitoimitus.com';
 
-  if (!resendApiKey || !ownerEmail) {
-    throw new Error('Missing required secrets: RESEND_API_KEY or OWNER_EMAIL');
+  if (!sendgridApiKey || !ownerEmail) {
+    throw new Error('Missing required secrets: SENDGRID_API_KEY or OWNER_EMAIL');
   }
 
-  const response = await fetch(RESEND_API_URL, {
+  const response = await fetch(SENDGRID_API_URL, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${resendApiKey}`,
+      Authorization: `Bearer ${sendgridApiKey}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: `Kotitoimitus.com <${fromEmail}>`,
-      to: ownerEmail,
+      personalizations: [{ to: [{ email: ownerEmail }] }],
+      from: { email: fromEmail, name: 'Kotitoimitus.com' },
       subject: 'Uusi uutiskirjeen tilaus Kotitoimitus.com-sivustolta',
-      text: `Uusi tilaaja: ${email}\nLähteen domain: ${origin || 'ei saatavilla'}`,
-      html: `<p>Uusi uutiskirjeen tilaaja: <strong>${escapeHtml(email)}</strong></p><p>Lähteen domain: ${escapeHtml(origin || 'ei saatavilla')}</p>`,
+      content: [
+        {
+          type: 'text/plain',
+          value: `Uusi tilaaja: ${email}\nLähteen domain: ${origin || 'ei saatavilla'}`,
+        },
+        {
+          type: 'text/html',
+          value: `<p>Uusi uutiskirjeen tilaaja: <strong>${escapeHtml(email)}</strong></p><p>Lähteen domain: ${escapeHtml(origin || 'ei saatavilla')}</p>`,
+        },
+      ],
     }),
   });
 
   if (!response.ok) {
     const body = await response.text();
-    throw new Error(`Resend API error ${response.status}: ${body}`);
+    throw new Error(`SendGrid API error ${response.status}: ${body}`);
   }
 
-  return response.json();
+  return { sent: true };
 }
 
 export async function onRequestOptions(context) {

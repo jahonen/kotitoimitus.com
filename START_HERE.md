@@ -52,10 +52,10 @@ The production build is output to `dist/`.
 
 ## Newsletter signup
 
-1. Create a free Resend account and generate an API key.
+1. Create or use an existing SendGrid account and generate an API key.
 2. Create a Cloudflare Pages project from this GitHub repository.
 3. In the Pages dashboard, set these secrets:
-   - `RESEND_API_KEY`
+   - `SENDGRID_API_KEY`
    - `OWNER_EMAIL` (your address)
 4. Optionally add a KV namespace binding named `SUBSCRIBERS` if you want to store emails.
 5. Cloudflare Pages builds and deploys the site automatically on every push to `main`.

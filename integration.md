@@ -1,12 +1,12 @@
 # External services and integrations
 
-## Resend
+## SendGrid
 
 - **Purpose:** Transactional email delivery for newsletter signup notifications.
-- **Endpoint:** `https://api.resend.com/emails`
-- **Auth:** Bearer token via `RESEND_API_KEY` secret.
-- **Docs:** https://resend.com/docs
-- **Notes:** A free Resend account is sufficient for low-volume notifications. You must verify a sending domain or use a Resend-provided shared domain before emails can be delivered reliably.
+- **Endpoint:** `https://api.sendgrid.com/v3/mail/send`
+- **Auth:** Bearer token via `SENDGRID_API_KEY` secret.
+- **Docs:** https://docs.sendgrid.com/api-reference/mail-send/mailsend
+- **Notes:** A free SendGrid account is sufficient for low-volume notifications. You should verify a sending domain or use a domain that SendGrid has authenticated to ensure reliable delivery.
 
 ## Cloudflare Pages
 
@@ -15,7 +15,7 @@
 - **Build command:** `npm run build`
 - **Build output directory:** `dist`
 - **Config file:** `wrangler.toml`
-- **Secrets:** `RESEND_API_KEY`, `OWNER_EMAIL` (set via the Cloudflare Pages dashboard or `wrangler pages secret put`)
+- **Secrets:** `SENDGRID_API_KEY`, `OWNER_EMAIL` (set via the Cloudflare Pages dashboard or `wrangler pages secret put`)
 - **Optional binding:** Cloudflare KV namespace `SUBSCRIBERS` for storing emails.
 - **Docs:** https://developers.cloudflare.com/pages/
 
