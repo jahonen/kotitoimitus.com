@@ -93,4 +93,11 @@ Then point your Cloudflare domain to the Pages project. See `integration.md` for
 
 1. Create a new static HTML file under `public/blog/kebab-case-title.html`.
 2. Include the same SEO meta tags, Open Graph, Twitter Cards, and Schema.org `BlogPosting` JSON-LD as the sample post.
-3. Add the post to `public/sitemap.xml` and to `src/components/Blog/Blog.jsx`.
+3. Add the post to `src/components/Blog/Blog.jsx`.
+4. Regenerate the sitemap with `npm run sitemap` (this also runs automatically before `npm run build`).
+
+## Sitemap and IndexNow
+
+- `npm run sitemap` regenerates `public/sitemap.xml` by scanning `public/blog/`.
+- `npm run indexnow` submits all URLs from `public/sitemap.xml` to IndexNow. Set `INDEXNOW_API_KEY` and `SITE_URL` first; the script creates the required verification file automatically.
+- Submit the sitemap to Google Search Console and Bing Webmaster Tools for regular indexing.

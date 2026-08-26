@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "indexnow": "node scripts/submit-indexnow.js",
+    "prebuild": "npm run sitemap"
   },
   "dependencies": {
     "react": "^18.3.1",

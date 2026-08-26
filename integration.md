@@ -25,6 +25,21 @@
 - **Action required:** Add a CNAME record in Cloudflare DNS pointing to the Cloudflare Pages project domain.
 - **Docs:** https://developers.cloudflare.com/dns/
 
+## IndexNow
+
+- **Purpose:** Notify Bing, Yandex, Naver, Seznam.cz and other participating search engines about new or updated URLs immediately.
+- **Endpoint:** `https://api.indexnow.org/IndexNow`
+- **Script:** `scripts/submit-indexnow.js`
+- **Required env vars:** `INDEXNOW_API_KEY`, `SITE_URL`
+- **Verification:** The script creates `public/<api-key>.txt` automatically.
+- **Docs:** https://www.indexnow.org/documentation
+
+## Google Search Console / Bing Webmaster Tools
+
+- **Purpose:** Monitor indexing status, submit sitemaps, and diagnose SEO issues.
+- **Action required:** Add the property in each console and submit `https://kotitoimitus.com/sitemap.xml`.
+- **Notes:** For Google, use the Search Console sitemap submission. For Bing, use IndexNow or Webmaster Tools.
+
 ## Google Fonts
 
 - **Purpose:** Loads the Noto Sans font family.
