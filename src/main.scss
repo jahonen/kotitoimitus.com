@@ -1,19 +1,20 @@
 @use "sass:map";
 
 :root {
-  /* Color palette */
-  --color-bg: #f8fafc;
+  /* Color palette — inspired by the Kotitoimitus logo */
+  --color-bg: #f8faf8;
   --color-surface: #ffffff;
   --color-surface-elevated: #ffffff;
-  --color-text: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #64748b;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-soft: #dbeafe;
-  --color-accent: #0ea5e9;
-  --color-border: #e2e8f0;
-  --color-border-subtle: #f1f5f9;
+  --color-text: #0f1f1c;
+  --color-text-secondary: #3d5a53;
+  --color-text-muted: #5f7a73;
+  --color-primary: #0f3d36;
+  --color-primary-hover: #0a2925;
+  --color-primary-soft: #e6f2ef;
+  --color-accent: #c9a86c;
+  --color-accent-soft: #f8f1e3;
+  --color-border: #dbe8e4;
+  --color-border-subtle: #eef5f3;
   --color-success: #15803d;
   --color-success-bg: #dcfce7;
   --color-error: #b91c1c;
@@ -58,10 +59,10 @@
   --max-wide-width: 1200px;
 
   /* Effects */
-  --shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.1), 0 2px 4px -2px rgb(15 23 42 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
+  --shadow-sm: 0 1px 2px 0 rgb(15 61 54 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(15 61 54 / 0.08), 0 2px 4px -2px rgb(15 61 54 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(15 61 54 / 0.1), 0 4px 6px -4px rgb(15 61 54 / 0.08);
+  --shadow-xl: 0 20px 25px -5px rgb(15 61 54 / 0.12), 0 8px 10px -6px rgb(15 61 54 / 0.08);
   --transition-fast: 150ms ease;
   --transition-base: 200ms ease;
   --transition-slow: 300ms ease;
@@ -69,15 +70,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0f172a;
-    --color-surface: #1e293b;
-    --color-surface-elevated: #334155;
-    --color-text: #f8fafc;
-    --color-text-secondary: #cbd5e1;
-    --color-text-muted: #94a3b8;
-    --color-border: #334155;
-    --color-border-subtle: #1e293b;
-    --color-primary-soft: rgb(37 99 235 / 0.2);
+    --color-bg: #0c2824;
+    --color-surface: #123a33;
+    --color-surface-elevated: #1a4d44;
+    --color-text: #f8faf8;
+    --color-text-secondary: #b8d0ca;
+    --color-text-muted: #8da89f;
+    --color-border: #1a4d44;
+    --color-border-subtle: #123a33;
+    --color-primary-soft: rgb(15 61 54 / 0.4);
+    --color-accent-soft: rgb(201 168 108 / 0.15);
   }
 }
 

@@ -18,8 +18,18 @@ function Header() {
     <header className="header">
       <div className="header__container">
         <a className="header__brand" href="#hero" onClick={handleLinkClick}>
-          <span className="header__title">Kotitoimitus.com</span>
-          <span className="header__tagline">B2B-ratkaisut alkoholin kotiintoimitukseen</span>
+          <img
+            className="header__logo"
+            src="/apple-touch-icon.png"
+            alt="Kotitoimitus.com"
+            width="40"
+            height="40"
+            loading="eager"
+          />
+          <div className="header__brand-text">
+            <span className="header__title">Kotitoimitus.com</span>
+            <span className="header__tagline">B2B-ratkaisut alkoholin kotiintoimitukseen</span>
+          </div>
         </a>
 
         <button

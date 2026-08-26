@@ -9,10 +9,14 @@
     <meta name="keywords" content="Kotitoimitus.com, alkoholin kotiintoimitus, etämyynti, alkoholilaki, Suomi, juomatuottaja, maahantuoja" />
     <meta name="author" content="Kotitoimitus.com" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#0f3d36" />
 
     <link rel="canonical" href="https://kotitoimitus.com/blog/tervetuloa-tasta-kotitoimitus-sai-alkunsa" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="fi_FI" />
@@ -63,35 +67,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
+        --color-bg: #f8faf8;
+        --color-surface: #ffffff;
+        --color-text: #0f1f1c;
+        --color-text-secondary: #3d5a53;
+        --color-text-muted: #5f7a73;
+        --color-primary: #0f3d36;
+        --color-primary-hover: #0a2925;
+        --color-accent: #c9a86c;
+        --color-border: #dbe8e4;
+        --color-border-subtle: #eef5f3;
         font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        color: #1e293b;
-        background-color: #f8fafc;
+        color: var(--color-text);
+        background-color: var(--color-bg);
         line-height: 1.6;
       }
       body { margin: 0; padding: 0; }
       header {
-        background-color: #0f172a;
-        color: #f8fafc;
-        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background-color: var(--color-primary);
+        color: #f8faf8;
+        padding: 1rem 1.5rem;
         text-align: center;
       }
-      header a { color: #f8fafc; text-decoration: none; }
+      header img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        object-fit: contain;
+        background-color: rgb(255 255 255 / 0.1);
+      }
+      header a { color: #f8faf8; text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+      header h1 { margin: 0; font-size: 1.25rem; }
       main {
         max-width: 800px;
         margin: 2rem auto;
         padding: 0 1rem;
       }
-      h1 { color: #0f172a; }
-      h2 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
-      a { color: #2563eb; }
+      h1 { color: var(--color-primary); }
+      h2 { color: var(--color-primary); border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem; }
+      a { color: var(--color-primary); }
+      a:hover { color: var(--color-primary-hover); }
       ul { padding-left: 1.25rem; }
       li { margin-bottom: 0.5rem; }
       footer {
         text-align: center;
         padding: 2rem;
-        color: #64748b;
+        color: var(--color-text-muted);
         font-size: 0.875rem;
-        background-color: #f1f5f9;
+        background-color: var(--color-border-subtle);
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        font-weight: 600;
       }
     </style>
 
@@ -100,7 +134,10 @@
   </head>
   <body>
     <header>
-      <a href="/"><h1>Kotitoimitus.com</h1></a>
+      <a href="/">
+        <img src="/apple-touch-icon.png" alt="" width="40" height="40" loading="eager" />
+        <h1>Kotitoimitus.com</h1>
+      </a>
     </header>
     <main>
       <article>
@@ -145,7 +182,15 @@
         </p>
         <p>Lisää palvelustamme kerromme tulevissa kirjoituksissa.</p>
 
-        <p><a href="/">Takaisin etusivulle</a></p>
+        <p>
+          <a class="back-link" href="/">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            Takaisin etusivulle
+          </a>
+        </p>
       </article>
     </main>
     <footer>

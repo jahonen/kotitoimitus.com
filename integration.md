@@ -49,6 +49,14 @@
 - **Installed in:** `index.html` and all static blog post templates.
 - **Docs:** https://ahrefs.com/analytics
 
+## Favicon / logo assets
+
+- **Source:** `asset/` directory (provided by brand).
+- **Files copied to `public/`:** `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`.
+- **Manifest:** `public/site.webmanifest` references the Android icons and defines theme/background colors.
+- **Usage:** Icons are linked in `index.html` and blog templates; the logo is used as a header image in `Header.jsx` and blog headers.
+- **Palette:** Logo colors (deep green and gold) drive the site color system in `src/main.scss`.
+
 ## Google Fonts
 
 - **Purpose:** Loads the Noto Sans font family.
