@@ -6,7 +6,7 @@ const requirements = [
   'Toimituspassi pidetään aina mukana toimituksia suoritettaessa.',
   'Alkoholijuomien merkintä ja alkoholipitoisuusilmoitus ovat kunnossa.',
   'Toimitetaan vain sallittuihin osoitteisiin ja noudatetaan toimituspaikkoja koskevia rajoituksia.',
-  'Vähittäismyyntiin soveltuvien alkoholijuomien vahvuusrajat huomioidaan: esimerkiksi miedot käymisteitse valmistetut juomat enintään 8,0 % ja muut enintään 5,5 % Alkon ulkopuolisessa jälleenmyynnissä.',
+  'Vahvuusrajat kanavoittain: kotimainen jälleenmyynti (ei Alko) enintään 8,0 %/5,5 %; rajat ylittävässä etämyynnissä enintään 80 % sallittu, väkevät mukaan lukien.'
 ];
 
 function Compliance() {
