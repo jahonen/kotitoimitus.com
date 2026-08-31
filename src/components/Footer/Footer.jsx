@@ -47,6 +47,18 @@ function Footer() {
           © {currentYear} Kotitoimitus.com. Kaikki oikeudet pidätetään. Palvelumme noudattavat Suomen
           alkoholilakia (1102/2017) ja alkoholilain muutosta (589/2026) sekä Valviran ohjeistuksia.
         </p>
+        <p className="footer__bottom-ownership">
+          Kotitoimitus.com-tavaramerkin ja liiketoiminnan omistaa yrityshautomo{' '}
+          <a
+            className="footer__link"
+            href="https://cvpe.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CVPE.dev
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );
