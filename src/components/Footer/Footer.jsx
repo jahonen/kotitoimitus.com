@@ -48,16 +48,25 @@ function Footer() {
           alkoholilakia (1102/2017) ja alkoholilain muutosta (589/2026) sekä Valviran ohjeistuksia.
         </p>
         <p className="footer__bottom-ownership">
-          Kotitoimitus.com-tavaramerkin ja liiketoiminnan omistaa yrityshautomo{' '}
+          Kotitoimitus.com-tavaramerkin ja liiketoiminnan omistaa{' '}
           <a
             className="footer__link"
             href="https://cvpe.dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            CVPE.dev
+            CVPE Development Oy
           </a>
-          .
+          {' '}(Y-tunnus{' '}
+          <a
+            className="footer__link"
+            href="https://tietopalvelu.ytj.fi/yritys/3651473-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            3651473-2
+          </a>
+          ).
         </p>
       </div>
     </footer>

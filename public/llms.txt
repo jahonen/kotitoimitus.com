@@ -26,8 +26,12 @@ Our B2B services include:
 - Recipients must be of legal age: 18 for mild alcohol, 20 for strong alcohol (väkevät alkoholijuomat).
 - Deliveries are allowed only between 9.00 and 21.00.
 
+## Ownership
+
+Kotitoimitus.com trademark and business are owned by CVPE Development Oy (Y-tunnus 3651473-2, registered in Finland). Official registry details: https://tietopalvelu.ytj.fi/yritys/3651473-2. Parent company website: https://cvpe.dev/.
+
 ## Contact
 
 Businesses interested in preparing for home delivery can subscribe to our newsletter or request a quote via the site.
 
-Last updated: 2026-08-26
+Last updated: 2026-08-31

@@ -19,7 +19,7 @@ This document lists every visual component in the Kotitoimitus.com static site.
 | Compliance | `src/components/Compliance/Compliance.jsx` | Legal compliance requirements as responsive cards with highlighted note box. | Hardcoded `requirements` array | Rendered DOM | None | beta |
 | Blog | `src/components/Blog/Blog.jsx` | Lists latest blog posts with links, dates and descriptions. | Hardcoded `posts` array | Rendered DOM + links | None | beta |
 | Newsletter | `src/components/Newsletter/Newsletter.jsx` | Email signup form with loading, success and error states. | Optional `VITE_NEWSLETTER_WORKER_URL` env var (defaults to `/api/newsletter`) | Rendered DOM + `fetch` POST to function | Calls Cloudflare Pages Function on submit | beta |
-| Footer | `src/components/Footer/Footer.jsx` | Multi-column site footer with navigation, links, copyright and ownership attribution to CVPE.dev. | None | Rendered DOM | None | beta |
+| Footer | `src/components/Footer/Footer.jsx` | Multi-column site footer with navigation, links, copyright and ownership attribution to CVPE Development Oy (Y-tunnus 3651473-2). | None | Rendered DOM | None | beta |
 
 ## Static page templates
 
